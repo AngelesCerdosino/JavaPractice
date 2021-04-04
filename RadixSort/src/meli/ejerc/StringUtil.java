@@ -59,10 +59,10 @@ public class StringUtil {
     // Completa los elemento del arr agregando caracteres c a la izquierda, dejando a todos con la longitud del mayor
     public static void lNormalize(String arr[], char c) {
 
-            int max = maxLength(arr);                   //declaro variable max y le asigno el valor del metodo anterior maxLength con el parametro que ya trae dentro
+            int maxL = maxLength(arr);                   //declaro variable max y le asigno el valor del metodo anterior maxLength con el parametro que ya trae dentro
             for (int i = 0; i < arr.length ; i++) {     //recorro las posiciones declarando mientras que i valga cero, si i es menor a la longitud del arr y aumento i
-                if(arr[i].length() < max){              //condiciono si arr en la posicion i de acuerdo a su tamaño si es menor a la bandera max, entonces
-                    String s = lpad(arr[i], max, c);    //declaro variable string y le asigno el valor del metodo lpad con el parametro del arr en la posicion i, mi variable max y caracter c
+                if(arr[i].length() < maxL){              //condiciono si arr en la posicion i de acuerdo a su tamaño si es menor a la bandera max, entonces
+                    String s = lpad(arr[i], maxL, c);    //declaro variable string y le asigno el valor del metodo lpad con el parametro del arr en la posicion i, mi variable max y caracter c
                     arr[i] = s;                         //será el arr en la posicion i igual a la variable string s
                 }
             }
