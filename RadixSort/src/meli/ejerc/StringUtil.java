@@ -50,9 +50,8 @@ public class StringUtil {
         int max = 0;
         for (String s : arr ) {
             int num = s.length();
-            if(num > max){
+            if(num > max)
                 max = num;
-            }
         }
         return max;
     }
