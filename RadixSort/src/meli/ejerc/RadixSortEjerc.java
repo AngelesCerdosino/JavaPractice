@@ -1,6 +1,5 @@
 package meli.ejerc;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -10,7 +9,7 @@ public class RadixSortEjerc {
         String cadena[] = StringUtil.toStringArray(arr);    //variable string que es array y lo igual a la doc StringUtil y convertirla en StringArray(arr)
         StringUtil.lNormalize(cadena,'0');               //a lnormalize de stringutil le pasamos por parametro el string y el caracter a iniciar
         int maximo = StringUtil.maxLength(cadena);
-        int position = maximo - 1;
+        int position = maximo-1;
 
         sort(position, cadena);
         arr = StringUtil.toIntArray(cadena);

@@ -4,7 +4,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class StringUtil {
-    //Retorna una cadena compuesta por n caracteres c. Ejemplo: replicate('x',5) ==> 'xxxxx'
+    //1. Retorna una cadena compuesta por n caracteres c. Ejemplo: replicate('x',5) ==> 'xxxxx'
     public static String replicate(char c, int n) {
         String l = "";                      //declaro variable string
         for (int i = 0; i < n; i++) {       //recorro el parametro n
@@ -14,7 +14,7 @@ public class StringUtil {
     }
 
 
-    //Retorna una cadena de longitud n, compuesta por s y precedida de tantos caracteres c como sea necesario para completar la longitud mencionada.
+    //2. Retorna una cadena de longitud n, compuesta por s y precedida de tantos caracteres c como sea necesario para completar la longitud mencionada.
     //Ejemplo lpad("5",3,'0') ==> "005"
     public static String lpad(String s, int n, char c) {
         int m = n - s.length();                             //declaro variable m y lo igualo a la diferencia con n, que lo que hace s.length es agregar espacios hasta que el string es del tamaño deseado
@@ -23,7 +23,7 @@ public class StringUtil {
         return total;                                       // retorno la variab total
     }
 
-    // Retorna un String[] conteniendo los elementos de arr representados como cadenas de caracteres
+    //3. Retorna un String[] conteniendo los elementos de arr representados como cadenas de caracteres
     public static String[] toStringArray(int arr[]) {
 
         String[] listaString = new String[arr.length];  //declaro variable de array string como una nueva lista de array con el tamaño que viene de parametro
@@ -34,7 +34,7 @@ public class StringUtil {
         return listaString;                             //devuelvo la lista string
     }
 
-    // Retorna un String[] conteniendo los elementos de arr representados como cadenas de caracteres
+    //4. Retorna un String[] conteniendo los elementos de arr representados como cadenas de caracteres
     public static int[] toIntArray(String arr[]) {
 
         int[] listaInt = new int [arr.length];
@@ -44,7 +44,7 @@ public class StringUtil {
         return listaInt;
     }
 
-    // Retorna la longitud del elemento con mayor cantidad de caracteres del array arr
+    //5. Retorna la longitud del elemento con mayor cantidad de caracteres del array arr
     public static int maxLength(String arr[]) {
 
         int max = 0;
@@ -56,7 +56,7 @@ public class StringUtil {
         return max;
     }
 
-    // Completa los elemento del arr agregando caracteres c a la izquierda, dejando a todos con la longitud del mayor
+    //6. Completa los elemento del arr agregando caracteres c a la izquierda, dejando a todos con la longitud del mayor
     public static void lNormalize(String arr[], char c) {
 
             int maxL = maxLength(arr);                   //declaro variable max y le asigno el valor del metodo anterior maxLength con el parametro que ya trae dentro
