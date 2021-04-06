@@ -1,5 +1,5 @@
 public class PasswordSimple extends Password {
-    public PasswordSimple(String regex) {
-        super(regex);
+    public PasswordSimple() {
+        super("^(?=.*[A-Z])(?=.*[a-z]){8,16}");
     }
 }

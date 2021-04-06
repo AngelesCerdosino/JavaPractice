@@ -4,7 +4,24 @@ import java.util.regex.Pattern;
 public class Password {
 
     private String cadena;
-    private int longitud;
+    private String regex;
+    private String message;
+
+    public String getRegex() {
+        return regex;
+    }
+
+    public void setRegex(String regex) {
+        this.regex = regex;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
 
     public Password(String regex) {
         this.cadena = regex;
@@ -18,27 +35,21 @@ public class Password {
         this.cadena = cadena;
     }
 
-    public int getLongitud() {
-        return longitud;
-    }
-
-    public void setLongitud(int longitud) { //para establecer el atributo longitud
-        this.longitud = longitud;
-    }
-
-    public void setValue(String pwd) {
+    protected void setValue(String pwd) {
         try {
-            Pattern pat = Pattern.compile(this.cadena);
+            Pattern pat = Pattern.compile(regex);
             Matcher mat = pat.matcher(pwd);
-            mat.matches();
-            System.out.println("Contraseña válida");
-            setCadena(pwd);
-        } catch (Exception e) {
-
+            boolean m = mat.find();
+            if (m)
+                this.cadena = pwd;
+            else
+                throw new Exception(this.message);
+            }
+        catch (Exception e) {
             e.printStackTrace();
         }
     }
-
-
 }
+
+
 
